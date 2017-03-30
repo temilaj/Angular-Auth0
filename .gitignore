@@ -1,6 +1,2 @@
 # dependencies
-/node_modules
-
-
-/src/app/components/home
-/src/app/components/profile
+/node_modulese
