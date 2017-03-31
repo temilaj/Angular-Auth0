@@ -17,7 +17,9 @@ export class Auth {
             if(error){
                 throw new Error(error);
             }
+            //Set id_token
             localStorage.setItem('id_token', authResult.idToken);
+            
             localStorage.setItem('profile', JSON.stringify(profile));
       });
     });

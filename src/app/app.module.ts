@@ -13,6 +13,6 @@ import { Auth } from "./services/auth.service";
   imports:      [ BrowserModule, routing ],
   declarations: [ AppComponent, HomeComponent, ProfileComponent ],
   bootstrap:    [ AppComponent ],
-  providers: [appRoutingProviders, Auth]
+  providers: [appRoutingProviders, AUTH_PROVIDERS, Auth]
 })
 export class AppModule { }

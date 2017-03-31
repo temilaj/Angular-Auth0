@@ -1,1 +1,14 @@
+<h2>
 user profile
+</h2>
+
+<div class="card" style="width: 15rem;" *ngIf="profile">
+  <img class="card-img-top" src="https://s.gravatar.com/avatar/95a54f91908ad15f5b38d5f927142ec5?s=480&r=pg&d=https%3A%2F%2Fcdn.auth0.com%2Favatars%2Fte.png" alt="Card image cap">
+  <div class="card-block">
+    <h4 class="card-title">{{profile.nickname}}</h4>
+    <h6 class="display">{{profile.email}}</h6>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+    <p>{{profile.user_id}}</p>
+</div>
+

@@ -10,11 +10,10 @@ import { Auth } from "../../services/auth.service";
     // styleUrls: ['profile.component.css'],
 })
 export class ProfileComponent{
-    ngOnInit() {
-        
+    profile: any;
+
+    constructor(private auth: Auth) {
+        this.profile = JSON.parse(localStorage.getItem('profile'));
+        console.log(this.profile);
     }
-    constructor(private auth: Auth) {}
-
-       
-
 }

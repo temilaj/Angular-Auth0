@@ -16,9 +16,9 @@ var auth_service_1 = require("../../services/auth.service");
 var ProfileComponent = (function () {
     function ProfileComponent(auth) {
         this.auth = auth;
+        this.profile = JSON.parse(localStorage.getItem('profile'));
+        console.log(this.profile);
     }
-    ProfileComponent.prototype.ngOnInit = function () {
-    };
     return ProfileComponent;
 }());
 ProfileComponent = __decorate([
