@@ -2,7 +2,8 @@ import {ModuleWithProviders} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
 
 import {HomeComponent} from './components/home/home.component';
-import {ProfileComponent} from './components/profile/profile.component';
+import { ProfileComponent } from './components/profile/profile.component';
+import { AuthGuard } from "./app.guard";
 
 const appRoutes: Routes = [
     {
@@ -11,10 +12,12 @@ const appRoutes: Routes = [
     },
     {
         path: 'profile',
-        component: ProfileComponent
-    }
+        component: ProfileComponent,
+        canActivate: [AuthGuard]
+    },
+    { path: '**', redirectTo: '' }
 ];
 
-export const appRoutingProviders: any[] = [];
+export const appRoutingProviders: any[] = [AuthGuard];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);

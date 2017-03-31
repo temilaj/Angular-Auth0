@@ -16,8 +16,8 @@ var AuthGuard = (function () {
         this.auth = auth;
         this.router = router;
     }
-    AuthGuard.prototype.CanActivate = function (next, state) {
-        if (this.auth.authenticated) {
+    AuthGuard.prototype.canActivate = function (next, state) {
+        if (this.auth.authenticated()) {
             console.log('Auth Guard Activated');
             return true;
         }
