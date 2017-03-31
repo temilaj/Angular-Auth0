@@ -8,7 +8,7 @@ declare var Auth0Lock: any;
 @Injectable()
 export class Auth {
   // Configure Auth0
-  lock = new Auth0Lock('H6km6ur9OnHghl4bSmgbY4DsNL5WDyfK', 'temilaj.auth0.com', {});
+  lock = new Auth0Lock('YOUR_API_KEY_HERE', 'YOUR_NAME.auth0.com', {});
 
   constructor() {
     // Add callback for lock `authenticated` event

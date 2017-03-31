@@ -14,7 +14,7 @@ var Auth = (function () {
     function Auth() {
         var _this = this;
         // Configure Auth0
-        this.lock = new Auth0Lock('H6km6ur9OnHghl4bSmgbY4DsNL5WDyfK', 'temilaj.auth0.com', {});
+        this.lock = new Auth0Lock('YOUR_API_KEY_HERE', 'YOUR_NAME.auth0.com', {});
         // Add callback for lock `authenticated` event
         this.lock.on("authenticated", function (authResult) {
             _this.lock.getProfile(authResult.idToken, function (error, profile) {
