@@ -42,7 +42,7 @@
         defaultExtension: 'js'
       },
       'angular2-jwt':{
-        defaultExtension: 'js'
+        "defaultExtension": 'js'
       }
     }
   });

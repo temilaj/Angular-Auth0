@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { Auth } from "../../services/auth.service";
 /**
 * This class represents the lazy loaded HomeComponent.
 */
@@ -8,8 +9,12 @@ import { Component, OnInit } from '@angular/core';
     templateUrl: 'profile.component.html',
     // styleUrls: ['profile.component.css'],
 })
-export class ProfileComponent implements OnInit {
+export class ProfileComponent{
     ngOnInit() {
         
     }
+    constructor(private auth: Auth) {}
+
+       
+
 }
